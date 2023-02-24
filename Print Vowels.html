@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user = prompt("Enter your character : ");
+        let temp;
+        for(let i=0; i<=user.length-1; i++)
+        {
+            temp = user[i];
+            if(temp == "a" || temp == "e" || temp == "i" || temp == "o" || temp == "U" || 
+               temp == "A" || temp == "E" || temp == "I" || temp == "O" || temp == "u")
+            {
+                document.write(temp,", is Vowels");
+                console.log(temp,", is Vowels");
+            }
+            else
+            {
+                document.write(temp,", is Consonent");
+                console.log(temp,", is Consonent");
+            }
+        }
+    </script>
+</body>
+</html>

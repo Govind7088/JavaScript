@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    let num1 = parseInt(prompt("Enter the First Number : "));  
+    let num2 = parseInt(prompt("Enter the Second Number : "));  
+    let num3 = parseInt(prompt("Enter the Third Number : "));  
+    let num4 = parseInt(prompt("Enter the Fourth Number : "));  
+    let num5 = parseInt(prompt("Enter the Fivth Number : ")); 
+    
+    document.write("This is num1 = "+ num1+"<br>");
+    document.write("This is num2 = "+ num2+"<br>");
+    document.write("This is num3 = "+ num3+"<br>");
+    document.write("This is num4 = "+ num4+"<br>");
+    document.write("This is num5 = "+ num5+"<br>");
+
+    if(num1>num2 && num1>num3 && num1>num4 && num1>num5)
+    {
+      document.write(num1," Your First Number is Large.");
+    }
+    else if(num2>num3 && num2>num4 && num2>num5 && num2>num1)
+    {
+      document.write(num2," Your Second Number is Large.");
+    }
+    else if(num3>num4 && num3>num5 && num3>num2 && num3>num1)
+    {
+      document.write(num3," Your Third Number is Large.");
+    }
+    else if(num4>num1 && num4>num2 && num4>num3 && num4>num5)
+    {
+      document.write(num4," Your Fourth Number is Large.");
+    }else
+    {
+      document.write(num5," Your Fivth Number is Large.");
+    }
+    
+    </script>
+</body>
+</html>
