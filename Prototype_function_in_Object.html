@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>Hii, It is JS.</h1>
     <script>
         
         // Prototype Function in Objects.
@@ -17,8 +18,8 @@
             this.age = age;
             this.eyeColor = eye;
         }
-        const myFriend = new Person("Raghav", "Sah", 20, "Red");
-        const myFather = new Person("Arun", "Shakya", 30, "Green");
+        const myFriend = new Person("Govind", "Shakya", 20, "Black");
+        const myFather = new Person("Krishna Murari", "Shakya", 40, "Green");
         
         Person.prototype.nationallity = "Indian";
         
@@ -30,8 +31,11 @@
         console.log(myFriend.age);
         document.write(myFriend.eyeColor+"<br>");
         console.log(myFriend.eyeColor);
-        document.write(myFriend.nationallity+"<br>"+"<br>");
+        document.write(myFriend.nationallity+"<br>");
         console.log(myFriend.nationallity);
+
+        const obj1 = JSON.stringify(myFriend);
+        document.write(obj1+"<br>"+"<br>");
 
         document.write(myFather.firstName+"<br>");
         console.log(myFather.firstName);
@@ -44,6 +48,8 @@
         document.write(myFather.nationallity+"<br>");
         console.log(myFather.nationallity);
 
+        const obj2 = JSON.stringify(myFather);
+        document.write(obj2);
 
 
 
