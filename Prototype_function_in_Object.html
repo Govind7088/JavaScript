@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        // Prototype Function in Objects.
+
+        function Person(first, last, age, eye){
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.eyeColor = eye;
+        }
+        const myFriend = new Person("Raghav", "Sah", 20, "Red");
+        const myFather = new Person("Arun", "Shakya", 30, "Green");
+        
+        Person.prototype.nationallity = "Indian";
+        
+        document.write(myFriend.firstName+"<br>");
+        console.log(myFriend.firstName);
+        document.write(myFriend.lastName+"<br>");
+        console.log(myFriend.lastName);
+        document.write(myFriend.age+"<br>");
+        console.log(myFriend.age);
+        document.write(myFriend.eyeColor+"<br>");
+        console.log(myFriend.eyeColor);
+        document.write(myFriend.nationallity+"<br>"+"<br>");
+        console.log(myFriend.nationallity);
+
+        document.write(myFather.firstName+"<br>");
+        console.log(myFather.firstName);
+        document.write(myFather.lastName+"<br>");
+        console.log(myFather.lastName);
+        document.write(myFather.age+"<br>");
+        console.log(myFather.age);
+        document.write(myFather.eyeColor+"<br>");
+        console.log(myFather.eyeColor);
+        document.write(myFather.nationallity+"<br>");
+        console.log(myFather.nationallity);
+
+
+
+
+
+    </script>
+</body>
+</html>
