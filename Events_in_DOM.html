@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1">Let's Learn Events in DOM</h1>
+    <h2 id="h2">I am Subheading</h2>
+    <br>
+    <p1 id="p1">This is Paragraph</p1>
+    <br><br>
+    <div id="Form">
+        <label for="my-input">Enter your Name</label>
+        <input 
+        type="text"
+        id="my-input"
+        placeholder="Your name"
+        onchange="updateOutput()">
+        <br><br>
+        <button id="my-button1" >Click me</button>
+        <br><br>
+        <button id="my-button2" onclick="handleClick()">Hover over me or Click me</button>
+    </div>
+    <script>
+        
+        // onClicked event.
+
+        function handleClick(){
+            console.log('Hello, Events');
+            alert('You clicked the button');
+        }
+       
+
+        // onChange event.
+
+        function updateOutput(){
+            let input = document.getElementById("my-input").value;
+            document.getElementById("p1").innerHTML = "You typed : " + input;
+        }
+        let button = document.getElementById("my-button1");
+        button.addEventListener("mouseover",fun1);
+        function fun1(){
+            button.style.backgroundColor = 'grey';
+        }
+        
+    </script>
+</body
+</html>
