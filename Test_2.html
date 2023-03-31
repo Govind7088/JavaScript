@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="h1">Let's Learn Events in DOM</h1>
+    <h2 id="h2">I am Subheading</h2>
+    <br>
+    <p1 id="p1">This is Paragraph</p1>
+    <p2 id="p2">This is other Paragraph</p2>
+    <br><br>
+    <div id="Form">
+        <label for="my-input">Enter your Name</label>
+        <input type="text" id="my-input" placeholder="Your name" onchange="updateOutput()">
+        <br><br>
+        <button id="my-button1" onclick="handleClick()">Click me</button>
+        <br><br>
+        <button id="my-button2" onclick="handleClick()">Hover over me or Click me</button>
+    </div>
+    <br><br>
+    <img id="my-img" src="data:image/jpeg;base64,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">
+    <script>
+
+        // 1. How can access an HTML element using JavaScript ?
+        let p1 = document.getElementById("p1");
+
+        // 2. How can chnage the content of an HTML element using JavaScript ?
+        p1.innerHTML = "I am also Paragraph."
+
+        // 4. How can add an event listener to an HTML element using JavaScript ?
+        let button1 = document.getElementById("my-button1");
+        button1.addEventListener("mouseover", fun1);
+
+        // 3. How can change the style of an HTML element using JavaScript ?
+        function fun1() {
+            button1.style.backgroundColor = 'red';
+        }
+
+        // 4. How can add an event listener to an HTML element using JavaScript ?
+        let button2 = document.getElementById("my-button2");
+        button2.addEventListener("mouseover", fun2);
+
+        // 3. How can change the style of an HTML element using JavaScript ?
+        function fun2() {
+            button2.style.backgroundColor = 'green';
+        }
+
+        // 5. How can create a new HTML element using JavaScript ?
+        let para = document.createElement("p");
+
+        // 6. How can you add a new HTML element to an existing element using JavaScript ?
+        let write = document.createTextNode("This is new Paragraph.");
+        para.appendChild(write);
+        // These lines before access the old paragraph.
+        let newpara = document.getElementById("p1");
+        newpara.appendChild(para);
+
+        // 7. How can you remove an HTML element using JavaScript ?
+        let removepara = document.getElementById("p2");
+        removepara.remove();
+
+        // 8. How can get the value of an input element using JavaScript ?
+        function updateOutput() {
+            let val = document.querySelector('input').value;
+            document.write(val);
+            console.log(val);
+        }
+
+        // 10. How can change the source attributes of an image element using JavaScript ?
+        let img1 = document.getElementById("my-img");
+        img1.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKjMaBh0x-o7nKRrq4HfkcowsJZxeiFFrLOg&usqp=CAU";
+
+        // 9. How can you set the value of an input element using JavaScript ?
+        
+    </script>
+</body>
+
+</html>
